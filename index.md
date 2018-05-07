@@ -19,7 +19,7 @@ Goal 3. If time permits, I would also like to study the impact of aid by looking
 
 ### Datasets
 
-I want to start with UN Dataset, and US Aid datasets, to do network analysis and visualize the network model, where nodes are countries, and edges are wegihted with flow of money as unit.
+I want to start with UN Dataset, and US Aid datasets. Build a network, where each node is a country, and visualize the quantified world. 
 
 1. https://www.foreignassistance.gov/explore
 2. https://comtrade.un.org
