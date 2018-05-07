@@ -1,22 +1,23 @@
-## Understanding International Aid 
-## and It's Impact on Health 
+# Understanding International Aid 
+# and It's Impact on Health 
 
 #### Project Proposal for cs169
 #### by Ruchir Patel
 
 ### Goals
 
-I want to primarily look at International Aid data for Health, and overall Trade among countries, to analyse where is the money coming from, and where it is going. 
+Goal 1. I want to primarily look at International Aid data to analyse where is the money coming from, and where it is going. 
+ 
 
 For example, 
 
 India receives a few billion dollars a year in Aid. India also gives a few Billion Dollar in Aids to neighbouring countries. I want to analyse & visualize where the flow originates. 
 
-If time permits, I would also like to study the impact of aid by looking at correlation between trade & aid, to child mortality rates, poverty rates, and malaria rates in India and African Countries.
+Goal 2. Furthermore, I would like to find Aid data intended specifically for Health and measure the impact.
+
+Goal 3. If time permits, I would also like to study the impact of aid by looking at correlation between trade & aid, to child mortality rates, poverty rates, and malaria rates in India and African Countries.
 
 ### Datasets
-
-I will be using existing datasets. 
 
 I want to start with UN Dataset, and US Aid datasets, to do network analysis and visualize the network model, where nodes are countries, and edges are wegihted with flow of money as unit.
 
