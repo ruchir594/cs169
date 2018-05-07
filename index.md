@@ -1,4 +1,7 @@
-## Welcome to GitHub Pages
+# Understanding International Aid and It's Impact on Health 
+
+### Project Proposal for cs169
+## by Ruchir Patel
 
 ### Goals
 
