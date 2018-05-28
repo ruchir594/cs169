@@ -26,7 +26,7 @@ ignore = ["Euro area", "European Union", "North America", "Low & middle income",
 "Middle East & North Africa (all income levels)", "Middle East & North Africa (developing only)",
 "Sub-Saharan Africa (all income levels)", "Sub-Saharan Africa (developing only)",
 "Upper middle income", "World", "Heavily indebted poor countries (HIPC)", "South Asia",
-"Least developed countries: UN classification", ]
+"Least developed countries: UN classification", "Barbados"]
 countries = []
 data3years = []
 for e in data:
@@ -36,23 +36,17 @@ for e in data:
     if len(e)>=3 and e[1] == '2014' and e[0] not in ignore:
         data3years.append([float(e[2])/1000000])
         countries.append(e[0])
+years = ['2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004']
+for year in years:
+    i=0
+    for e in data:
+        if len(e) >=3 and e[1] == year and countries[i] == e[0]:
+            data3years[i].append(float(e[2])/1000000)
+            i+=1
+    print 'i: ', i
 
-i=0
-for e in data:
-    if len(e) >=3 and e[1] == '2013' and countries[i] == e[0]:
-        data3years[i].append(float(e[2])/1000000)
-        i+=1
-i=0
-for e in data:
-    if len(e) >=3 and e[1] == '2012' and countries[i] == e[0]:
-        data3years[i].append(float(e[2])/1000000)
-        i+=1
+n_components = len(years)+1
 
-i=0
-for e in data:
-    if len(e) >=3 and e[1] == '2011' and countries[i] == e[0]:
-        data3years[i].append(float(e[2])/1000000)
-        i+=1
 data3years = np.array(data3years)
 
 print len(countries)
@@ -81,11 +75,11 @@ noise = noise + noise.T
 noise[np.arange(noise.shape[0]), np.arange(noise.shape[0])] = 0
 similarities += noise
 
-mds = manifold.MDS(n_components=4, max_iter=3000, eps=1e-9, random_state=seed,
+mds = manifold.MDS(n_components=n_components, max_iter=3000, eps=1e-9, random_state=seed,
                    dissimilarity="precomputed", n_jobs=1)
 pos = mds.fit(similarities).embedding_
 
-nmds = manifold.MDS(n_components=4, metric=False, max_iter=3000, eps=1e-12,
+nmds = manifold.MDS(n_components=n_components, metric=False, max_iter=3000, eps=1e-12,
                     dissimilarity="precomputed", random_state=seed, n_jobs=1,
                     n_init=1)
 npos = nmds.fit_transform(similarities, init=pos)

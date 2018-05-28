@@ -26,8 +26,9 @@ I want to start with UN Dataset, and US Aid datasets. Build a network, where eac
 1. https://www.foreignassistance.gov/explore
 2. https://comtrade.un.org
 3. World Bank official Aid Received: http://data.un.org/Data.aspx?q=Official+Development+Assistance&d=WDI&f=Indicator_Code%3aDT.ODA.ALLD.CD
-4. Bill & Melinda Gates Foundation dataset and result
+4. Bill & Melinda Gates Foundation dataset and results
 5. Child Mortality Rate Dataset: https://ourworldindata.org/child-mortality
+6. World Bank Data: http://databank.worldbank.org/data/reports.aspx?source=jobs#
 
 ### Questions
 
@@ -48,7 +49,15 @@ Non Western Countries have wide veriety of economic activities, and above paper 
 
 https://ruchir594.github.io/cs169/
 
+
 ### Dataset Used
 
 1. World Bank official Aid Received: http://data.un.org/Data.aspx?q=Official+Development+Assistance&d=WDI&f=Indicator_Code%3aDT.ODA.ALLD.CD
 2. Child Mortality Rate Dataset: https://ourworldindata.org/child-mortality
+3. World Bank Data: http://databank.worldbank.org/data/reports.aspx?source=jobs#
+
+### Intriguing questions
+
+1. Why is Sri Lanka doing so good?
+
+### Case Study of Sri Lanka 

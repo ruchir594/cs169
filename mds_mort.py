@@ -20,7 +20,7 @@ with open('data/child-mortality.csv', 'rb') as f:
 # data is data of all countries
 ignore = []
 filter = ['Afghanistan', 'Argentina', 'Australia', 'Bangladesh', 'Bhutan', 'Canada',
-        'China', 'Congo', 'Germany', 'India', 'Japan', 'Russia', 'Singapore', 'Sri Lanka', 'Sweden',
+        'China', 'Congo', 'Germany', 'India', 'Japan', 'Russia', 'Rwanda','Singapore', 'Sri Lanka', 'Sweden',
         'Switzerland', 'United Kingdom', 'United States']
 countries = []
 data3years = []
@@ -34,24 +34,17 @@ for e in data:
 
 countries.append('placeholder')
 print len(countries)
-i=0
-for e in data:
-    if len(e) >=3 and e[2] == '2013' and countries[i] == e[0]:
-        data3years[i].append(float(e[3]))
-        i+=1
-i=0
-for e in data:
-    if len(e) >=3 and e[2] == '2012' and countries[i] == e[0]:
-        data3years[i].append(float(e[3]))
-        i+=1
 
-i=0
-for e in data:
-    if len(e) >=3 and e[2] == '2011' and countries[i] == e[0]:
-        data3years[i].append(float(e[3]))
-        i+=1
+years = ['2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004']
+for year in years:
+    i=0
+    for e in data:
+        if len(e) >=3 and e[2] == year and countries[i] == e[0]:
+            data3years[i].append(float(e[3]))
+            i+=1
+
 data3years = np.array(data3years)
-
+n_components = len(years)+1
 print len(countries)
 print data3years.shape
 #countries = [chr(ord('A')+i) for i in range(20)]
@@ -78,11 +71,11 @@ noise = noise + noise.T
 noise[np.arange(noise.shape[0]), np.arange(noise.shape[0])] = 0
 similarities += noise
 
-mds = manifold.MDS(n_components=4, max_iter=3000, eps=1e-9, random_state=seed,
+mds = manifold.MDS(n_components=n_components, max_iter=3000, eps=1e-9, random_state=seed,
                    dissimilarity="precomputed", n_jobs=1)
 pos = mds.fit(similarities).embedding_
 
-nmds = manifold.MDS(n_components=4, metric=False, max_iter=3000, eps=1e-12,
+nmds = manifold.MDS(n_components=n_components, metric=False, max_iter=3000, eps=1e-12,
                     dissimilarity="precomputed", random_state=seed, n_jobs=1,
                     n_init=1)
 npos = nmds.fit_transform(similarities, init=pos)
