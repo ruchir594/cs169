@@ -9,10 +9,10 @@ with open('data/child-mortality.csv', 'rb') as f:
         data.append(e)
 
 # data is data of all countries
-country = 'Sri Lanka'
+country = 'Chad'
 mort = []
 
-years = [2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004]
+years = [2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994]
 years = years[::-1]
 for i in range(len(data)):
     if len(data[i]) >=3 and country == data[i][0] and data[i][2] == str(years[0]):
@@ -55,14 +55,15 @@ print len(feature_name), feature_name
 print len(feature_vector), len(feature_vector[0])#, feature_vector
 
 
-from scipy.stats.stats import pearsonr
+from scipy.stats.stats import spearmanr
 
 cors = []
 for i in range(len(feature_vector)):
-    cors.append(pearsonr(mort, feature_vector[i])[0])
+    cors.append(spearmanr(mort, feature_vector[i])[0])
 
 import matplotlib.pyplot as plt
 plt.bar(np.arange(len(cors)), cors, align='center', alpha=0.5)
 plt.xticks(np.arange(len(cors)), feature_name, rotation=-8, size='small', horizontalalignment='left')
 plt.ylabel('Correlation')
+plt.title(country)
 plt.show()

@@ -21,8 +21,7 @@ Goal 3. Understanding factors of Child Mortalirty rate
 
 ### Questions
 
-1. Which countries are outliers when it comes to Child Mortality?
-i.e. which coutnries that are suppose to do good aren't doing as well (US, India), and which countries despite being tiny countries with history of war are doing pretty well.
+1. There is clearly an intutiion that european countries and doing far better than african countries, but are there any outliers?
 2. Why is Sri Lanka doing so good? Is there data significantly different from other countries?
 3. Study United States, India, Rwanda
 
@@ -103,4 +102,5 @@ https://ruchir594.github.io/cs169/
 ### Base Code from
 
 MDS: http://scikit-learn.org/stable/auto_examples/manifold/plot_mds.html
+
 

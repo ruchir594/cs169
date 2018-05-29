@@ -19,9 +19,10 @@ with open('data/child-mortality.csv', 'rb') as f:
 
 # data is data of all countries
 ignore = []
-filter = ['Afghanistan', 'Argentina', 'Australia', 'Bangladesh', 'Bhutan', 'Canada',
-        'China', 'Congo', 'Germany', 'India', 'Japan', 'Russia', 'Rwanda','Singapore', 'Sri Lanka', 'Sweden',
-        'Switzerland', 'United Kingdom', 'United States']
+filter = ['Afghanistan', 'Argentina', 'Bangladesh', 'Bhutan', 'Canada',
+        'China', 'Germany', 'India', 'Japan', 'Russia', 'Rwanda','Singapore', 'Sri Lanka', 'Sweden'
+        , 'United Kingdom', 'United States', 'Congo', 'Iraq']
+filter.sort()
 countries = []
 data3years = []
 for e in data:
