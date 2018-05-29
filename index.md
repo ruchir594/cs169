@@ -1,3 +1,37 @@
+# Understanding Child Mortality
+## Studying Outliers
+
+
+#### Project Proposal for cs169
+#### by Ruchir Patel
+
+GitLab on CS server: https://gitlab.cs.dartmouth.edu/ruchir/international-aid-and-health
+
+### Goals
+
+Goal 1. Visualize Aid, Visualize Child Mortality rates by Country
+Goal 2. Study the outliers
+Goal 3. Understanding factors of Child Mortalirty rate
+
+### Datasets
+
+1. World Bank official Aid Received: http://data.un.org/Data.aspx?q=Official+Development+Assistance&d=WDI&f=Indicator_Code%3aDT.ODA.ALLD.CD
+2. Child Mortality Rate Dataset: https://ourworldindata.org/child-mortality
+3. World Bank Economic Data: http://databank.worldbank.org/data/reports.aspx?source=jobs#
+
+### Questions
+
+1. There is clearly an intutiion that european countries and doing far better than african countries, but are there any outliers?
+2. Why is Sri Lanka doing so good? Is there data significantly different from other countries?
+3. Study United States, India, Rwanda
+
+
+# --------------------------------------------
+### This project has evolved over dicusssions with Professor Campbell and my older description and pitch is as below as we narrow down the scope
+#### Because International Aid data is segregated by class, i.e. data specific to health aid is not recorded by UN. However, some countries independently publish that data.
+# --- Older Description
+
+
 # Understanding International Aid
 # and It's Impact on Health
 
@@ -28,7 +62,6 @@ I want to start with UN Dataset, and US Aid datasets. Build a network, where eac
 3. World Bank official Aid Received: http://data.un.org/Data.aspx?q=Official+Development+Assistance&d=WDI&f=Indicator_Code%3aDT.ODA.ALLD.CD
 4. Bill & Melinda Gates Foundation dataset and results
 5. Child Mortality Rate Dataset: https://ourworldindata.org/child-mortality
-6. World Bank Data: http://databank.worldbank.org/data/reports.aspx?source=jobs#
 
 ### Questions
 
@@ -60,4 +93,13 @@ https://ruchir594.github.io/cs169/
 
 1. Why is Sri Lanka doing so good?
 
-### Case Study of Sri Lanka 
+### Case Study of Sri Lanka
+
+
+
+## References
+
+### Base Code from
+
+MDS: http://scikit-learn.org/stable/auto_examples/manifold/plot_mds.html
+
